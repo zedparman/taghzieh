@@ -42,8 +42,8 @@ export default {
     return {
       mobile: "",
       code: "",
-      level: ""
-    //   token_type: "DOCTOR_TOKEN",
+      level: "",
+      //   token_type: "DOCTOR_TOKEN",
     };
   },
   methods: {
@@ -52,17 +52,18 @@ export default {
         "http://95.217.96.131:8080/api/getauthcode",
         {
           mobile: this.mobile,
-        //   token_type: "DOCTOR_TOKEN",
+          //   token_type: "DOCTOR_TOKEN",
           code: this.code,
-          level: this.level
+          level: this.level,
         }
       );
       console.log(response);
-      this.$router.push("doctorSignUp");
+      this.$router.push("/");
       localStorage.setItem("code", this.code);
       this.mobile = "";
     },
   },
+
   mounted() {
     if (process.client) {
       this.mobile = localStorage.getItem("mobile");
