@@ -63,7 +63,6 @@ export default {
       this.mobile = "";
     },
   },
-
   mounted() {
     if (process.client) {
       this.mobile = localStorage.getItem("mobile");
