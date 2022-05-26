@@ -5,17 +5,8 @@
         <h1>title</h1>
       </div>
       <div>
-        <!-- <h1>{{ phone_number }}</h1>
-        <h1>{{ sms_token }}</h1> -->
 
         <form @submit.prevent="handleDoctorVerify">
-          <!-- <h1>{{ phone_number }}</h1> -->
-          <!-- <input
-            type="text"
-            class="form-control mb-2"
-            v-model="mobile"
-            placeholder="mobile"
-          /> -->
           <input
             type="text"
             class="form-control mb-2"
@@ -43,7 +34,6 @@ export default {
       mobile: "",
       code: "",
       level: "",
-      //   token_type: "DOCTOR_TOKEN",
     };
   },
   methods: {
@@ -52,7 +42,6 @@ export default {
         "http://95.217.96.131:8080/api/getauthcode",
         {
           mobile: this.mobile,
-          //   token_type: "DOCTOR_TOKEN",
           code: this.code,
           level: this.level,
         }
